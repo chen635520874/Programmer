@@ -8,9 +8,38 @@ import java.io.File;
  * JAVA输出指定目录下的子目录和子文件
  */
 
-public class FileOut{
+public class FileOut {
+
+    public static void main(String[] args) {
+        printFile(new File("E:\\KuGou"),1);
+    }
+
+    public static void printFile(File file,int tab){
+        File[] fileList = file.listFiles();
+        for (int i=0;i<fileList.length;i++){
+            for (int j=0;j<tab;j++){
+                System.out.print("|---");
+            }
+            System.out.println(fileList[i].getName());
+
+            if (fileList[i].isDirectory()){
+                printFile(fileList[i],tab+1);
+            }
+        }
+
+    }
+}
 
 
+
+
+
+
+
+
+
+
+/*
     public static void main(String[] args){
         printFile(new File("E:\\KuGou"),1);
 
@@ -37,3 +66,4 @@ public class FileOut{
 
     }
 }
+*/
