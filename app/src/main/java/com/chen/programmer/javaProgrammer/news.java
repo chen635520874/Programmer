@@ -1,4 +1,4 @@
-package com.chen.programmer;
+package com.chen.programmer.javaProgrammer;
 
 /**
  * Created by Administrator on 2017/9/28.

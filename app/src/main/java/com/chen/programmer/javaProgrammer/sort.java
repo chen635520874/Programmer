@@ -1,12 +1,10 @@
-package com.chen.programmer;
+package com.chen.programmer.javaProgrammer;
 
 /**
- * Created by Administrator on 2017/9/20.
+ * Created by Administrator on 2017/11/10.
  */
 
-public class test {
-
-
+public class sort {
     /**
      *
      * 冒泡排序
@@ -39,34 +37,34 @@ public class test {
      */
 
     public static void selectSort(int[] array){
-       if (array == null|| array.length<=0){
-           return;
-       }
+        if (array == null|| array.length<=0){
+            return;
+        }
 
-       for (int i=0;i<array.length;i++){
-           int min=i;//将当前下标定义为最小值下标
+        for (int i=0;i<array.length;i++){
+            int min=i;//将当前下标定义为最小值下标
 
-           for (int j=i+1;j<array.length;j++ ){
-               if (array[min]>array[j]){/* 如果有小于当前最小值的关键字 */
-                   min= j; /* 将此关键字的下标赋值给min */
-               }
-           }
+            for (int j=i+1;j<array.length;j++ ){
+                if (array[min]>array[j]){/* 如果有小于当前最小值的关键字 */
+                    min= j; /* 将此关键字的下标赋值给min */
+                }
+            }
 
-           if (array[i]!=array[min]){/* 若min不等于i，说明找到最小值，交换 */
-               int temp =array[min];
-               array[min]=array[i];
-               array[i]=temp;
+            if (array[i]!=array[min]){/* 若min不等于i，说明找到最小值，交换 */
+                int temp =array[min];
+                array[min]=array[i];
+                array[i]=temp;
 
-           }
+            }
 
-       }
+        }
 
     }
 
     public static void printArr(int[] array){
         for (int i=0;i<array.length;i++){
             System.out.println(array[i]+",");
-           // System.out.println(" ");
+            // System.out.println(" ");
         }
     }
 

@@ -1,4 +1,4 @@
-package com.chen.programmer;
+package com.chen.programmer.javaProgrammer;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
