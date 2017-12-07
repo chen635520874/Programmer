@@ -14,19 +14,23 @@ package com.chen.programmer.javaProgrammer;
  */
 
 public class tutu {
-    public static void main(String args[]){
-        int i=0;
-        for (i=1;i<=20;i++){
-            System.out.println(tutu(i));
+
+    public static void main(String arg[]){
+        for (int i=1;i<20;i++){
+            System.out.println(x(i));
         }
     }
-    public static int tutu(int x){
-        if (x==1||x==2){
+    public static int x(int i){
+        if (i==1||i==2){
             return 1;
-        }else{
-            return tutu(x-1)+tutu(x-2);
+        }else {
+            return x(i-1)+x(i-2);
         }
     }
+
+
+
+
 
 
    /* public static void main(String args[]) {

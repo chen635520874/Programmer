@@ -10,25 +10,57 @@ import java.io.File;
 
 public class FileOut {
 
-    public static void main(String[] args) {
-        printFile(new File("E:\\KuGou"),1);
+    public static void main(String[] args){
+        printFiles(new File("E:\\KuGou"),1);
     }
 
-    public static void printFile(File file,int tab){
-        File[] fileList = file.listFiles();
-        for (int i=0;i<fileList.length;i++){
-            for (int j=0;j<tab;j++){
-                System.out.print("|---");
-            }
-            System.out.println(fileList[i].getName());
+    public static void printFiles(File file,int tab){
+        if (file.isFile()){
+            System.out.println("你选择的是一个文件！");
+        }else {
+            File[] fileList= file.listFiles();
 
-            if (fileList[i].isDirectory()){
-                printFile(fileList[i],tab+1);
+            for (int i=0;i<fileList.length;i++){
+                for (int j=0;j<tab;j++){
+                    System.out.print("|---");
+                }
+                System.out.println(fileList[i].getName());
+
+                if (fileList[i].isDirectory()){
+                    printFiles(fileList[i],tab+1);
+                }
             }
         }
-
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
