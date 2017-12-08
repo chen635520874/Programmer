@@ -11,12 +11,15 @@ import java.io.File;
 public class FileOut {
 
     public static void main(String[] args){
+        printFiles(new File("E:\\KuGou\\Lyric\\j-REC001-00000000000000000000000000000000-14336409-00000000.krc"),1);
         printFiles(new File("E:\\KuGou"),1);
     }
 
     public static void printFiles(File file,int tab){
         if (file.isFile()){
             System.out.println("你选择的是一个文件！");
+            System.out.println(file.getName());
+           /* System.out.println("你选择的是一个文件！");*/
         }else {
             File[] fileList= file.listFiles();
 
