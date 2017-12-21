@@ -20,7 +20,7 @@ public class news {
 
     public static void bubbleSort(int[] array){
         int temp;
-        for (int i=0;i<array.length-1;i++){
+        for (int i=0;i<array.length-1;i++){//最多做array.length-1次排序
             for (int j=0;j< array.length-1-i;j++){
                 if (array[j]>array[j+1]){
                     temp =array[j];
